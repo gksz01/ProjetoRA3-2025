@@ -19,11 +19,11 @@ public class Programa extends Application {
         PainelCurso painelCurso = new PainelCurso();
         tabCursos.setContent(painelCurso);
 
-        Tab tabAlunos = new Tab("Alunos");
-        Tab tabProfessores = new Tab("Professores");
-        Tab tabDisciplinas = new Tab("Disciplinas");
+        Tab crudLyra = new Tab("Lyra");
+        Tab crudGus = new Tab("Gustavo");
+        Tab crudRava = new Tab("Ravenda");
 
-        tabPane.getTabs().addAll(tabCursos, tabAlunos, tabProfessores, tabDisciplinas);
+        tabPane.getTabs().addAll(tabCursos, crudLyra, crudGus, crudRava);
 
         Scene scene = new Scene(tabPane, 600, 600);
         stage.setScene(scene);
