@@ -9,6 +9,8 @@ public abstract class PainelBase extends VBox {
     protected TextField nomeTextField;
     protected TextField tipoTextField;
     protected TextField custoTextField;
+    protected TextField generoTextField;
+    protected TextField idadeTextField;
     protected TextArea inputResult;
     protected Button adicionarButton;
     protected Button listarButton;
