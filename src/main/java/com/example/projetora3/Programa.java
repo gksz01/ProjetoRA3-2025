@@ -1,6 +1,7 @@
 package com.example.projetora3;
 
 import Views.PainelCurso;
+import Views.PainelEstudante;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;
@@ -16,7 +17,10 @@ public class Programa extends Application {
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE); // Impede o fechamento das abas
 
         Tab tabCursos = new Tab("Cursos");
+        Tab tabEstudantes = new Tab("Estudantes");
         PainelCurso painelCurso = new PainelCurso();
+        PainelEstudante painelEstudante = new PainelEstudante();
+        tabCursos.setGraphic(painelCurso);
         tabCursos.setContent(painelCurso);
 
         Tab crudLyra = new Tab("Lyra");
