@@ -2,10 +2,10 @@ package Models;
 
 public class Estudante {
     private String nome;
-    private double idade;
+    private int idade;
     private String genero;
 
-    public Estudante(String nome, double idade, String genero) {
+    public Estudante(String nome, int idade, String genero) {
         this.nome = nome;
         this.idade = idade;
         this.genero = genero;
@@ -19,7 +19,7 @@ public class Estudante {
     public double getIdade() {
         return idade;
     }
-    public void setIdade(double idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
     public String getGenero() {
