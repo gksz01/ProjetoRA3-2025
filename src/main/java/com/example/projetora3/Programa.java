@@ -17,17 +17,14 @@ public class Programa extends Application {
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE); // Impede o fechamento das abas
 
         Tab tabCursos = new Tab("Cursos");
-        Tab tabEstudantes = new Tab("Estudantes");
         PainelCurso painelCurso = new PainelCurso();
-        PainelEstudante painelEstudante = new PainelEstudante();
-        tabCursos.setGraphic(painelCurso);
         tabCursos.setContent(painelCurso);
 
-        Tab crudLyra = new Tab("Lyra");
-        Tab crudGus = new Tab("Gustavo");
-        Tab crudRava = new Tab("Ravenda");
+        Tab tabEstudantes = new Tab("Estudantes");
+        PainelEstudante painelEstudante = new PainelEstudante();
+        tabEstudantes.setContent(painelEstudante);
 
-        tabPane.getTabs().addAll(tabCursos, crudLyra, crudGus, crudRava);
+        tabPane.getTabs().addAll(tabCursos, tabEstudantes);
 
         Scene scene = new Scene(tabPane, 600, 600);
         stage.setScene(scene);
