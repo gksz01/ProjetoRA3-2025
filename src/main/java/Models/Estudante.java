@@ -1,6 +1,11 @@
 package Models;
 
-public class Estudante {
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Estudante implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
     private String nome;
     private int idade;
     private String genero;
@@ -27,6 +32,11 @@ public class Estudante {
     }
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    @Override
+    public String toString() {
+        return nome + "," + idade + "," + genero;
     }
 
 }

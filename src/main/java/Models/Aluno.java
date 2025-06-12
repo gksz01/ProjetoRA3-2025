@@ -1,6 +1,11 @@
 package Models;
 
-public class Aluno {
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Aluno implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
     private String nome;
     private String email;
     private int idade;
@@ -20,4 +25,9 @@ public class Aluno {
 
     public int getIdade() { return idade; }
     public void setIdade(int idade) { this.idade = idade; }
+
+    @Override
+    public String toString() {
+        return nome + "," + email + "," + idade;
+    }
 }

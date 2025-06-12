@@ -9,7 +9,7 @@ public class PainelAluno extends PainelBase {
     private final AlunoController alunoController;
 
     public PainelAluno() {
-        super("Aluno", "Email do Aluno", "Idade do Aluno");
+        super("Aluno", "Email do Aluno", "Idade do Aluno", 2);
         this.alunoController = new AlunoController();
     }
 
@@ -18,8 +18,8 @@ public class PainelAluno extends PainelBase {
         adicionarButton.setOnAction(e -> {
             try {
                 String nome = nomeTextField.getText();
-                String email = tipoTextField.getText();
-                int idade = Integer.parseInt(custoTextField.getText());
+                String email = emailTextField.getText();
+                int idade = Integer.parseInt(idadeTextField.getText());
                 alunoController.createAluno(nome, email, idade);
                 inputResult.setText("Aluno criado com sucesso!");
             } catch (Exception ex) {
@@ -44,8 +44,8 @@ public class PainelAluno extends PainelBase {
             try {
                 String nomeAntigo = nomeTextField.getText();
                 String novoNome = nomeTextField.getText();
-                String novoEmail = tipoTextField.getText();
-                int novaIdade = Integer.parseInt(custoTextField.getText());
+                String novoEmail = emailTextField.getText();
+                int novaIdade = Integer.parseInt(idadeTextField.getText());
                 alunoController.updateAluno(nomeAntigo, novoNome, novoEmail, novaIdade);
                 inputResult.setText("Aluno atualizado com sucesso!");
             } catch (Exception ex) {

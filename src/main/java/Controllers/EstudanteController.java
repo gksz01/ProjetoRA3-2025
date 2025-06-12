@@ -32,24 +32,20 @@ public class EstudanteController {
         }
     }
 
-    public void updateEstudante(String nome, int idade, String genero) {
+    public void updateEstudante(String nomeAntigo, String novoNome, int novaIdade, String novoGenero) {
         try {
-
             for (Estudante estudante : estudantes) {
-                if (estudante.getNome().equals(nome) && estudante.getIdade() == idade) {
-                    estudante.setNome(nome);
-                }
-                if (estudante.getIdade() == idade) {
-                    estudante.setIdade(idade);
-                }
-                if (estudante.getGenero().equals(genero)) {
-                    estudante.setGenero(genero);
+                if (estudante.getNome().equals(nomeAntigo)) {
+                    estudante.setNome(novoNome);
+                    estudante.setIdade(novaIdade);
+                    estudante.setGenero(novoGenero);
                     EstudanteData.salvarEstudante(estudantes);
+                    return;
                 }
             }
-            throw new RuntimeException("O curso: " + nome + "Não foi encontrado!");
+            throw new RuntimeException("O estudante: " + nomeAntigo + " não foi encontrado!");
         } catch (Exception e) {
-            throw new RuntimeException("Ocorreu um erro ao tentar atualizar o curso: " + e.getMessage());
+            throw new RuntimeException("Ocorreu um erro ao tentar atualizar o estudante: " + e.getMessage());
         }
     }
 

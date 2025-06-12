@@ -2,6 +2,7 @@ package com.example.projetora3;
 
 import Views.PainelAluno;
 import Views.PainelCurso;
+import Views.PainelDisciplina;
 import Views.PainelEstudante;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -29,7 +30,11 @@ public class Programa extends Application {
         PainelAluno painelAluno = new PainelAluno();
         tabAluno.setContent(painelAluno);
 
-        tabPane.getTabs().addAll(tabCursos, tabEstudantes, tabAluno);
+        Tab tabDisciplina = new Tab("Disciplinas");
+        PainelDisciplina painelDisciplina = new PainelDisciplina();
+        tabDisciplina.setContent(painelDisciplina);
+
+        tabPane.getTabs().addAll(tabCursos, tabEstudantes, tabAluno, tabDisciplina);
 
         Scene scene = new Scene(tabPane, 600, 600);
         stage.setScene(scene);
