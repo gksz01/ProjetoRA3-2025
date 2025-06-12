@@ -90,7 +90,7 @@ public abstract class PainelBase extends VBox {
         configurarAcoes();
     }
 
-    public PainelBase(String nomeEntidade, String idadeEntidade, String generoEntidade, boolean teste){
+    public PainelBase(String nomeEntidade, String idadeEntidade, String generoEntidade, boolean isCurso){
         setSpacing(15);
         setPadding(new Insets(15));
         setStyle("-fx-background-color: #f4f4f4;");
@@ -162,6 +162,8 @@ public abstract class PainelBase extends VBox {
 
         configurarAcoes();
     }
+
+
 
     protected abstract void configurarAcoes();
 }

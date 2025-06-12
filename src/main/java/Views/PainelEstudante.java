@@ -8,7 +8,7 @@ import java.util.List;
 public class PainelEstudante extends PainelBase {
     private EstudanteController estudanteControler;
     public PainelEstudante() {
-        super("Estudante","Idade do estudante","Genero do estudante", false);
+        super("Estudante","Idade do estudante","Genero do estudante", true);
         this.estudanteControler = new EstudanteController();
     }
     @Override

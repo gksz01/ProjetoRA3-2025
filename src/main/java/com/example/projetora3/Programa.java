@@ -25,7 +25,7 @@ public class Programa extends Application {
         PainelEstudante painelEstudante = new PainelEstudante();
         tabEstudantes.setContent(painelEstudante);
 
-        Tab tabAluno = new Tab("Aluno");
+        Tab tabAluno = new Tab("Alunos");
         PainelAluno painelAluno = new PainelAluno();
         tabAluno.setContent(painelAluno);
 
