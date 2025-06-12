@@ -1,5 +1,6 @@
 package com.example.projetora3;
 
+import Views.PainelAluno;
 import Views.PainelCurso;
 import Views.PainelEstudante;
 import javafx.application.Application;
@@ -24,7 +25,11 @@ public class Programa extends Application {
         PainelEstudante painelEstudante = new PainelEstudante();
         tabEstudantes.setContent(painelEstudante);
 
-        tabPane.getTabs().addAll(tabCursos, tabEstudantes);
+        Tab tabAluno = new Tab("Aluno");
+        PainelAluno painelAluno = new PainelAluno();
+        tabAluno.setContent(painelAluno);
+
+        tabPane.getTabs().addAll(tabCursos, tabEstudantes, tabAluno);
 
         Scene scene = new Scene(tabPane, 600, 600);
         stage.setScene(scene);
